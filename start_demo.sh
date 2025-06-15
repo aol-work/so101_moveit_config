@@ -1,1 +1,3 @@
-QT_QPA_PLATFORM=xcb ros2 launch moveit_setup_assistant setup_assistant.launch.py
+#!/bin/bash
+
+QT_QPA_PLATFORM=xcb ros2 launch so_arm_moveit_config demo.launch.py

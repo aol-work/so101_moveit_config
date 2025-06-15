@@ -1,4 +1,9 @@
 # You  need to have the move_group launched in another tmerinal
+
+# Start the move_group node
+ros2 launch so_arm_moveit_config move_group.launch.py
+
+# Set sim time
 ros2 param set /move_group use_sim_time true
 
 # Do forward kinematics to get valid positions:
