@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: so_arm_description
+    relative_path: urdf/so101_new_calib.urdf
+  srdf:
+    relative_path: config/so101_new_calib.srdf
+  package_settings:
+    author_name: ddgfd
+    author_email: df@dfssdf.de
+    generated_timestamp: 1749979007

@@ -1,0 +1,13 @@
+# shoulder_rotation_goal.yaml
+request:
+  allowed_planning_time: 5.0
+  group_name: arm                  # must match the group in your SRDF
+  goal_constraints:
+  - joint_constraints:
+    - joint_name: Rotation         # “shoulder rotation” joint
+      position: 1.0                # radians
+      tolerance_above: 0.01        #  ±0.01 rad tolerance
+      tolerance_below: 0.01
+      weight: 1.0                  # full importance
+planning_options:
+  plan_only: false                  # set false if you want auto-execute
