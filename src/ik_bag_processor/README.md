@@ -20,6 +20,7 @@ A ROS2 package for processing ROS bags containing PoseStamped messages and compu
 ## Installation
 
 1. Build the package:
+
 ```bash
 cd /path/to/your/workspace
 colcon build --packages-select ik_bag_processor
@@ -65,6 +66,7 @@ The storage format is automatically detected based on the file extension and dir
 ## Output
 
 The package will:
+
 1. Read all PoseStamped messages from the specified topic in the bag
 2. For each pose, call the MoveIt IK service
 3. Publish successful IK solutions as JointState messages to `/ik_joint_states`
@@ -91,7 +93,8 @@ ros2 run ik_bag_processor ik_processor /path/to/recorded_poses.mcap
 ```
 
 The script will output something like:
-```
+
+```text
 [INFO] [ik_processor]: Waiting for IK service...
 [INFO] [ik_processor]: IK service available!
 [INFO] [ik_processor]: Detected bag format: mcap
@@ -118,6 +121,7 @@ The script will output something like:
 ## Next Steps
 
 The joint states published to `/ik_joint_states` can be used to:
+
 - Feed into a position controller
 - Save to a new bag for later playback
 - Analyze joint trajectories
